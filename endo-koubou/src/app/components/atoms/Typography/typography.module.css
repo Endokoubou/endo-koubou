@@ -1,0 +1,14 @@
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
