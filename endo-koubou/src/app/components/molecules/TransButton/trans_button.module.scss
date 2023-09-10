@@ -1,0 +1,28 @@
+.contents {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.next {
+  flex-direction: row;
+}
+
+.back {
+  flex-direction: row-reverse;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  color: var(--color-base);
+  background: var(--color-secondary);
+  border-radius: 100px;
+}
