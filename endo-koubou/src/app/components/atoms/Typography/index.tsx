@@ -1,5 +1,5 @@
-import "./typography.module.css";
-import styles from "./typography.module.css";
+import "./typography.module.scss";
+import styles from "./typography.module.scss";
 
 type TypographyProps = {
   variant: "h1" | "h2" | "h3" | "h4" | "p" | "span";
