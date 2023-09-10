@@ -17,7 +17,11 @@ export function TransButton({ label, direction, path }: TransButtonProps) {
         <span className={`${styles.contents} ${styles[classDirection]}`}>
           <Typography variant="p">{label}</Typography>
           <span className={styles.icon}>
-            {direction === "next" ? <FaArrowRight /> : <FaArrowLeft />}
+            {direction === "next" ? (
+              <FaArrowRight className={styles.icon_arrow} />
+            ) : (
+              <FaArrowLeft className={styles.icon_arrow} />
+            )}
           </span>
         </span>
       </Button>

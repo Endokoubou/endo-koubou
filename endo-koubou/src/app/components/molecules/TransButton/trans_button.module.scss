@@ -7,12 +7,26 @@
   font-weight: bold;
 }
 
+.icon_arrow {
+  transition: transform 0.4s ease-in-out;
+}
+
 .next {
   flex-direction: row;
+  &:hover {
+    .icon_arrow {
+      transform: translateX(70%);
+    }
+  }
 }
 
 .back {
   flex-direction: row-reverse;
+  &:hover {
+    .icon_arrow {
+      transform: translateX(-70%);
+    }
+  }
 }
 
 .icon {
