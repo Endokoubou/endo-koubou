@@ -1,95 +1,87 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import "./globals.css";
+import Image from "next/image";
+import styles from "./page.module.scss";
+import { Typography } from "@/app/components/atoms";
+import { TransButton } from "@/app/components/molecules";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <section className={styles.mv}>
+        <div className={styles.title}>
+          <Image
+            src="/images/logo_endo-koubou.png"
+            width={75}
+            height={68}
+            alt="ENDO工房のロゴ画像"
+            className={styles.logo}
+          />
+          <Typography variant="h1">
+            舞台美術を
+            <br />
+            もっと身近に
+          </Typography>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className={styles.works}>
+        <Typography variant="h2" vertical>
+          作品紹介
+          <br />
+          <span className={styles.sub_title}>
+            <Typography variant="span">WORKS</Typography>
+          </span>
+        </Typography>
+        <p>
+          ENDO工房では様々な舞台美術を 手がけております。写真はその一部です。
+        </p>
+        <TransButton label="もっとみる" direction="next" path="/" />
+      </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <section className={styles.company}>
+        <Typography variant="h2" vertical>
+          会社概要
+          <br />
+          スタッフ一覧
+          <br />
+          <span className={styles.sub_title}>
+            <Typography variant="span">COMPANY</Typography>
+          </span>
+        </Typography>
+        <p>
+          軽い会社説明。〜〜年に設立して低コストながらもクオリティが高い作品が売りです等のテキストが入ります
+        </p>
+        <TransButton label="もっとみる" direction="next" path="/" />
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <section className={styles.flow}>
+        <Typography variant="h2" vertical>
+          制作依頼のフロー
+          <br />
+          <span className={styles.sub_title}>
+            <Typography variant="span">FLOW</Typography>
+          </span>
+        </Typography>
+        <div>huro- zu</div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className={styles.contact}>
+        <Typography variant="h2" vertical>
+          お問い合わせ
+          <br />
+          <span className={styles.sub_title}>
+            <Typography variant="span">CONTACT</Typography>
+          </span>
+        </Typography>
+        <p>
+          ENDO工房へのご依頼は下のボタンよりメールを作成しお送りいただくか、
+          <br />
+          または各種SNSのダイレクトメッセージからお願いいします。
+        </p>
+        <p>
+          ご依頼前の相談のみも受け付けておりますので、お気軽にお問い合わせください。
+        </p>
+      </section>
     </main>
-  )
+  );
 }
