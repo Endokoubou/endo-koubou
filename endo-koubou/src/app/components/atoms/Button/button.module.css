@@ -1,0 +1,18 @@
+.button {
+  background: none;
+  border: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.color_base {
+  color: var(--color-base);
+}
+
+.color_primary {
+  color: var(--color-text);
+}
