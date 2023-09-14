@@ -12,7 +12,7 @@ export function Typography({
   children,
   vertical = false,
 }: TypographyProps) {
-  const classVertical = vertical ? "vertical" : "horizon";
+  const classVertical = vertical ? "vertical" : "";
 
   switch (variant) {
     case "h1":

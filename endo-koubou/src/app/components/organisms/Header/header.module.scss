@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   background: #ffffffb3;
-  z-index: 100;
+  z-index: var(--z-index-1);
   transform: translateY(-100%);
   transition: transform 0.4s ease-in-out;
   &.slideDown {
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1000px;
+    width: var(--w-contents);
     margin: 0 auto;
   }
 }
@@ -27,7 +27,7 @@
   display: flex;
   gap: var(--space-10);
   .item {
-    padding: 10px;
+    padding: var(--space-3);
     transition: 0.3s;
     &:hover {
       cursor: pointer;

@@ -11,7 +11,7 @@
     left: 50%;
     transform: translateX(-50%);
     .logo {
-      margin: 0 0 24px 0;
+      margin-bottom: var(--space-8);
     }
   }
 }
