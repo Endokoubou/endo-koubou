@@ -16,3 +16,19 @@
 .color_primary {
   color: var(--color-text);
 }
+
+.bg_primary {
+  background: var(--color-primary);
+}
+
+.bg_secondary {
+  background: var(--color-secondary);
+}
+
+.size_m {
+  padding: var(--space-3) var(--space-10);
+}
+
+.rounded {
+  border-radius: 1000px;
+}
