@@ -18,72 +18,115 @@ export default function Home() {
               className={styles.logo}
             />
           </FadeIn>
-          {/* <Typography variant="h1">
-            舞台美術を
-            <br />
-            もっと身近に
-          </Typography> */}
           <MvTitle />
         </div>
       </section>
 
       <section className={styles.works}>
-        <Typography variant="h2" vertical>
-          作品紹介
-          <br />
-          <span className={styles.sub_title}>
-            <Typography variant="span">WORKS</Typography>
-          </span>
-        </Typography>
-        <p>
-          ENDO工房では様々な舞台美術を 手がけております。写真はその一部です。
-        </p>
-        <TransButton label="もっとみる" direction="next" path="/" />
+        <div className={styles.relative_box}>
+          <div className={styles.sub_title}>
+            <Typography variant="h2" vertical>
+              作品紹介
+              <br />
+              <span>
+                <Typography variant="span">WORKS</Typography>
+              </span>
+            </Typography>
+          </div>
+          <div className={styles.read}>
+            <Typography variant="p">
+              ENDO工房では様々な舞台美術を
+              <br />
+              手がけております。写真はその一部です。
+            </Typography>
+          </div>
+          <div className={styles.bg} />
+        </div>
+        <div
+          style={{
+            width: "100%",
+            height: "650px",
+            background: "#5e5e5e",
+          }}
+        />
+        <div className={styles.button}>
+          <TransButton label="もっとみる" direction="next" path="/" />
+        </div>
       </section>
 
       <section className={styles.company}>
-        <Typography variant="h2" vertical>
-          会社概要
-          <br />
-          スタッフ一覧
-          <br />
-          <span className={styles.sub_title}>
-            <Typography variant="span">COMPANY</Typography>
-          </span>
-        </Typography>
-        <p>
-          軽い会社説明。〜〜年に設立して低コストながらもクオリティが高い作品が売りです等のテキストが入ります
-        </p>
-        <TransButton label="もっとみる" direction="next" path="/" />
+        <div className={styles.relative_box}>
+          <div className={styles.sub_title}>
+            <Typography variant="h2" vertical>
+              会社概要
+              <br />
+              スタッフ一覧
+              <br />
+              <span>
+                <Typography variant="span">COMPANY</Typography>
+              </span>
+            </Typography>
+          </div>
+          <div className={styles.wrapper}>
+            <Image
+              src="/images/company.jpg"
+              width="794"
+              height="359"
+              alt="工房内の風景写真"
+              className={styles.image}
+            />
+            <div className={styles.relative_box}>
+              <div className={styles.right_contents}>
+                <div className={styles.read}>
+                  <Typography variant="p">
+                    軽い会社説明。〜〜年に設立して低コストながらもクオリティが高い作品が売りです等のテキストが入ります
+                  </Typography>
+                </div>
+                <div className={styles.button}>
+                  <TransButton label="もっとみる" direction="next" path="/" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.bg} />
+        </div>
       </section>
 
       <section className={styles.flow}>
-        <Typography variant="h2" vertical>
-          制作依頼のフロー
-          <br />
-          <span className={styles.sub_title}>
-            <Typography variant="span">FLOW</Typography>
-          </span>
-        </Typography>
+        <div className={styles.sub_title}>
+          <Typography variant="h2" vertical>
+            制作依頼のフロー
+            <br />
+            <span>
+              <Typography variant="span">FLOW</Typography>
+            </span>
+          </Typography>
+        </div>
+
         <div>huro- zu</div>
       </section>
 
       <section className={styles.contact}>
-        <Typography variant="h2" vertical>
-          お問い合わせ
-          <br />
-          <span className={styles.sub_title}>
-            <Typography variant="span">CONTACT</Typography>
-          </span>
-        </Typography>
-        <p>
-          ENDO工房へのご依頼は下のボタンよりメールを作成しお送りいただくか、
-          <br />
-          または各種SNSのダイレクトメッセージからお願いいします。
-        </p>
-        <p>
-          ご依頼前の相談のみも受け付けておりますので、お気軽にお問い合わせください。
-        </p>
+        <div className={styles.sub_title}>
+          <Typography variant="h2" vertical>
+            お問い合わせ
+            <br />
+            <span>
+              <Typography variant="span">CONTACT</Typography>
+            </span>
+          </Typography>
+        </div>
+        <div className={styles.flex_column}>
+          <Typography variant="p">
+            ENDO工房へのご依頼は下のボタンよりメールを作成しお送りいただくか、
+            <br />
+            または各種SNSのダイレクトメッセージからお願いいします。
+          </Typography>
+          <Typography variant="p">
+            ご依頼前の相談のみも受け付けておりますので、お気軽にお問い合わせください。
+          </Typography>
+          <div>setumei</div>
+        </div>
       </section>
     </main>
   );
