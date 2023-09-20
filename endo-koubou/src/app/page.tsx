@@ -2,7 +2,13 @@ import "./globals.css";
 import Image from "next/image";
 import styles from "./page.module.scss";
 import { FadeIn, Typography } from "@/app/components/atoms";
-import { TransButton, MvTitle } from "@/app/components/molecules";
+import {
+  TransButton,
+  MvTitle,
+  ContactButton,
+  FlowItem,
+} from "@/app/components/molecules";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -102,30 +108,82 @@ export default function Home() {
             </span>
           </Typography>
         </div>
-
-        <div>huro- zu</div>
+        <div>
+          <FlowItem
+            step="01"
+            icon="mail"
+            title="お問い合わせ"
+            text="お問い合わせページまたは各種SNSからご連絡ください。"
+          />
+          <FlowItem
+            step="02"
+            icon="document"
+            title="台本もしくは依頼書、公演の概要"
+            text="ご要望に沿ったものをお作りするため台本等のお渡しをお願いしております。"
+          />
+          <FlowItem
+            step="03"
+            icon="chat"
+            title="打ち合わせ（ヒヤリング）"
+            text="お電話またはメールなどで打ち合わせし、依頼内容のすり合わせを行います。"
+          />
+          <FlowItem
+            step="04"
+            icon="edit"
+            title="デザイン考案"
+            text="ご依頼内容が定まり次第、デザインを作成いたします。"
+          />
+          <FlowItem
+            step="05"
+            icon="presen"
+            title="台本もしくは依頼書、公演の概要"
+            text="考案したデザインをお見せし、細部の最終調整を行います。"
+          />
+          <FlowItem
+            step="06"
+            icon="check"
+            title="本決定"
+            text="お客様の満足のいく形で最終調整が済んだ後、本格的に舞台美術の製作に取り掛かります。"
+            isLast
+          />
+        </div>
       </section>
 
       <section className={styles.contact}>
-        <div className={styles.sub_title}>
-          <Typography variant="h2" vertical>
-            お問い合わせ
-            <br />
-            <span>
-              <Typography variant="span">CONTACT</Typography>
-            </span>
-          </Typography>
+        <div className={styles.inner}>
+          <div className={styles.sub_title}>
+            <Typography variant="h2" vertical>
+              お問い合わせ
+              <br />
+              <span>
+                <Typography variant="span">CONTACT</Typography>
+              </span>
+            </Typography>
+          </div>
+          <div className={styles.contents}>
+            <Typography variant="p">
+              ENDO工房へのご依頼は下のボタンよりメールを作成しお送りいただくか、
+              または各種SNSのダイレクトメッセージからお願いいします。
+            </Typography>
+            <Typography variant="p">
+              ご依頼前の相談のみも受け付けておりますので、お気軽にお問い合わせください。
+            </Typography>
+            <div>setumei</div>
+            <div className={styles.button}>
+              <ContactButton label="お問い合わせ" />
+            </div>
+          </div>
         </div>
-        <div className={styles.flex_column}>
-          <Typography variant="p">
-            ENDO工房へのご依頼は下のボタンよりメールを作成しお送りいただくか、
-            <br />
-            または各種SNSのダイレクトメッセージからお願いいします。
-          </Typography>
-          <Typography variant="p">
-            ご依頼前の相談のみも受け付けておりますので、お気軽にお問い合わせください。
-          </Typography>
-          <div>setumei</div>
+      </section>
+      <section className={styles.sns}>
+        <Typography variant="p">
+          下記アイコンから各種SNSのプロフィールを開くことができます。
+          <br />
+          ダイレクトメッセージよりお問い合わせいただくことも可能です。
+        </Typography>
+        <div className={styles.icons}>
+          <FaInstagram />
+          <FaXTwitter />
         </div>
       </section>
     </main>
