@@ -1,0 +1,9 @@
+.footer {
+  color: var(--color-base);
+  background: var(--color-secondary);
+  .inner {
+    width: var(--w-contents);
+    padding: var(--space-l) var(--space-10);
+    margin: 0 auto;
+  }
+}
