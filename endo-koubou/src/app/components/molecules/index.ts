@@ -3,5 +3,13 @@ import { MvTitle } from "./MvTitle";
 import { ContactButton } from "./ContactButton";
 import { FlowItem } from "./FlowItem";
 import { ScrollButton } from "./ScrollButton";
+import { SnsButton } from "./SnsButton";
 
-export { TransButton, MvTitle, ContactButton, FlowItem, ScrollButton };
+export {
+  TransButton,
+  MvTitle,
+  ContactButton,
+  FlowItem,
+  ScrollButton,
+  SnsButton,
+};
