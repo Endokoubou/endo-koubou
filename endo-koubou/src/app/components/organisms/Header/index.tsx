@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Typography } from "@/app/components/atoms";
+import { Logo, Typography } from "@/app/components/atoms";
 import styles from "./header.module.scss";
 
 const menuMapping = [
@@ -36,12 +36,7 @@ export function Header() {
     >
       <div className={styles.inner}>
         <Link href="/">
-          <Image
-            src="/images/logo_header.png"
-            width={209}
-            height={64.5}
-            alt="ENDO工房のロゴ画像"
-          />
+          <Logo fill="secondary" />
         </Link>
         <menu>
           <ul className={styles.menu}>
