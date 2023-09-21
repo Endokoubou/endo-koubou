@@ -3,7 +3,11 @@ import { Button, Typography } from "@/app/components/atoms";
 import { FaArrowUp } from "react-icons/fa6";
 import styles from "./scroll_button.module.scss";
 
-export function ScrollButton() {
+export type ScrollButtonProps = {
+  className?: string;
+};
+
+export function ScrollButton({ className }: ScrollButtonProps) {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -12,7 +16,7 @@ export function ScrollButton() {
   };
 
   return (
-    <Button onClick={handleScrollToTop}>
+    <Button onClick={handleScrollToTop} className={className}>
       <div className={styles.wrapper}>
         <div className={styles.icon}>
           <FaArrowUp />

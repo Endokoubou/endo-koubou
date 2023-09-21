@@ -2,16 +2,17 @@ import styles from "./logo.module.scss";
 
 export type LogoProps = {
   fill?: "base" | "primary" | "secondary";
+  className?: string;
 };
 
-export function Logo({ fill }: LogoProps) {
+export function Logo({ fill, className }: LogoProps) {
   const fillClass = fill ? `fill_${fill}` : "";
   return (
     <svg
       width="190"
       height="31"
       viewBox="0 0 190 31"
-      className={styles[fillClass]}
+      className={`${styles[fillClass]} ${className}`}
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clip-path="url(#clip0_714_423)">
