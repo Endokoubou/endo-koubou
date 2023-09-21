@@ -1,11 +1,17 @@
 .fill_base {
-  fill: var(--color-base);
+  .path {
+    fill: var(--color-base);
+  }
 }
 
 .fill_primary {
-  fill: var(--color-primary);
+  .path {
+    fill: var(--color-primary);
+  }
 }
 
 .fill_secondary {
-  fill: var(--color-secondary);
+  .path {
+    fill: var(--color-secondary);
+  }
 }
