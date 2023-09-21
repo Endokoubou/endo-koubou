@@ -43,7 +43,7 @@
   }
   .bg {
     position: absolute;
-    width: 78.5vw;
+    width: 75vw;
     height: 150px;
     background: var(--color-primary);
     bottom: 0;
@@ -59,7 +59,7 @@
 
 .company {
   padding-top: var(--space-l);
-  padding-bottom: 460px;
+  padding-bottom: 470px;
   .relative_box {
     width: var(--w-contents);
     margin: 0 auto;
@@ -70,7 +70,8 @@
   }
   .image {
     position: absolute;
-    left: -24%;
+    top: 85%;
+    left: -32%;
   }
   .wrapper {
     margin-top: -40px;
