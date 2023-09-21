@@ -16,9 +16,6 @@
     .right_contents {
       display: flex;
       .icons {
-        display: flex;
-        gap: var(--space-4);
-        font-size: 24px;
         margin: 0 var(--space-l) 0 0;
       }
       .links {

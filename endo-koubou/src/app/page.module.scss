@@ -139,8 +139,7 @@
   .icons {
     display: flex;
     justify-content: center;
-    gap: var(--space-4);
-    margin-top: var(--space-8);
+    margin: var(--space-8) 0 0;
     svg {
       font-size: 28px;
     }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo, Typography } from "@/app/components/atoms";
 import { ScrollButton } from "@/app/components/molecules";
-import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { SnsButtons } from "@/app/components/organisms";
 import styles from "./footer.module.scss";
 
 export function Footer() {
@@ -17,8 +17,7 @@ export function Footer() {
         </div>
         <div className={styles.right_contents}>
           <div className={styles.icons}>
-            <FaInstagram />
-            <FaXTwitter />
+            <SnsButtons color="base" size="s" />
           </div>
           <nav>
             <ul className={styles.links}>

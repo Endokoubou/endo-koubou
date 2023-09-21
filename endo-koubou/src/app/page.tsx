@@ -1,6 +1,6 @@
 import "./globals.css";
 import Image from "next/image";
-import styles from "./page.module.scss";
+import styles from "@/app/page.module.scss";
 import { FadeIn, Typography } from "@/app/components/atoms";
 import {
   TransButton,
@@ -8,7 +8,7 @@ import {
   ContactButton,
   FlowItem,
 } from "@/app/components/molecules";
-import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { SnsButtons } from "@/app/components/organisms";
 
 export default function Home() {
   return (
@@ -182,8 +182,7 @@ export default function Home() {
           ダイレクトメッセージよりお問い合わせいただくことも可能です。
         </Typography>
         <div className={styles.icons}>
-          <FaInstagram />
-          <FaXTwitter />
+          <SnsButtons color="secondary" size="m" />
         </div>
       </section>
     </main>
