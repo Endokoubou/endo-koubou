@@ -6,6 +6,7 @@ export type ButtonProps = {
   size?: "s" | "m" | "l";
   rounded?: boolean;
   children?: React.ReactNode;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 export function Button({
@@ -14,6 +15,7 @@ export function Button({
   size,
   rounded,
   children,
+  onClick,
 }: ButtonProps) {
   const colorClass = `color_${color}`;
   const bgClass = bgColor ? `bg_${bgColor}` : "";
@@ -23,6 +25,7 @@ export function Button({
   return (
     <button
       className={`${styles.button} ${styles[colorClass]} ${styles[bgClass]} ${styles[sizeClass]} ${styles[roundedClass]}`}
+      onClick={onClick}
     >
       {children}
     </button>
