@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import styles from "./layout.module.scss";
@@ -24,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${notoSansJp.className} ${styles.layout}`}>
-        <Header />
         {children}
         <Footer />
       </body>
