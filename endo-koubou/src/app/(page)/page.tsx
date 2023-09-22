@@ -157,7 +157,7 @@ export default function Home() {
                 </span>
               </Typography>
             </div>
-            <ContactSection />
+            <ContactSection className={styles.contents} />
           </div>
         </section>
         <section className={styles.sns}>

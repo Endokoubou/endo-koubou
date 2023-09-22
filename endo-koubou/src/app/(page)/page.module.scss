@@ -120,6 +120,9 @@
     justify-content: center;
     transform: translateX(-50%);
   }
+  .contents {
+    margin-top: var(--space-7);
+  }
 }
 
 .sns {
