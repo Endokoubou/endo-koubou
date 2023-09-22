@@ -4,6 +4,7 @@ import { ContactButton } from "./ContactButton";
 import { FlowItem } from "./FlowItem";
 import { ScrollButton } from "./ScrollButton";
 import { SnsButton } from "./SnsButton";
+import { ReadMore } from "./ReadMore";
 
 export {
   TransButton,
@@ -12,4 +13,5 @@ export {
   FlowItem,
   ScrollButton,
   SnsButton,
+  ReadMore,
 };
