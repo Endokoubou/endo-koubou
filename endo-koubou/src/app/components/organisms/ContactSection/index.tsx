@@ -2,9 +2,13 @@ import { Typography } from "@/app/components/atoms";
 import { ReadMore, ContactButton } from "@/app/components/molecules";
 import styles from "./contact_section.module.scss";
 
-export function ContactSection() {
+export type ContactSectionProps = {
+  className?: string;
+};
+
+export function ContactSection({ className }: ContactSectionProps) {
   return (
-    <div className={styles.contents}>
+    <div className={`${styles.contents} ${className}`}>
       <Typography variant="p">
         ENDO工房へのご依頼は下のボタンよりメールを作成しお送りいただくか、
         または各種SNSのダイレクトメッセージからお願いいします。
