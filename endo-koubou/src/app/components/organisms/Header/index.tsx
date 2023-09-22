@@ -1,14 +1,13 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Logo, Typography } from "@/app/components/atoms";
 import styles from "./header.module.scss";
 
 const menuMapping = [
-  { label: "作品一覧", path: "/" },
-  { label: "会社概要 & スタッフ一覧", path: "/" },
-  { label: "お問い合わせ", path: "/" },
+  { label: "作品一覧", path: "/art-work" },
+  { label: "会社概要 & スタッフ一覧", path: "/company" },
+  { label: "お問い合わせ", path: "/contact" },
 ];
 
 export function Header() {
@@ -38,7 +37,7 @@ export function Header() {
         <Link href="/">
           <Logo fill="secondary" />
         </Link>
-        <menu>
+        <nav>
           <ul className={styles.menu}>
             {menuMapping.map((page, index) => (
               <li key={index} className={styles.item}>
@@ -48,7 +47,7 @@ export function Header() {
               </li>
             ))}
           </ul>
-        </menu>
+        </nav>
       </div>
     </header>
   );
