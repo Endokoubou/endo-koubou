@@ -121,6 +121,7 @@
     transform: translateX(-50%);
   }
   .contents {
+    padding: 0 var(--space-10);
     margin-top: var(--space-7);
   }
 }

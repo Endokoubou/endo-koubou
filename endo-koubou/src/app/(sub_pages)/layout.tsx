@@ -15,12 +15,5 @@ export default function SubPageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <SubPageTemplate>
-        <PageTitle title={"aa"} />
-      </SubPageTemplate>
-      <div className={styles.contents}>{children}</div>
-    </>
-  );
+  return <section className={styles.contents}>{children}</section>;
 }

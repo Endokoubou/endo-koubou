@@ -1,4 +1,4 @@
-import "../globals.css";
+import "./globals.css";
 import Image from "next/image";
 import styles from "./page.module.scss";
 import { FadeIn, Typography } from "@/app/components/atoms";
