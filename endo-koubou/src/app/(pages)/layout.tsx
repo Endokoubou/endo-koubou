@@ -1,8 +1,9 @@
-import "@/app/globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import styles from "./layout.module.scss";
 import { Footer, Header } from "@/app/components/organisms";
+import Template from "./template";
 
 const notoSansJp = Noto_Sans_JP({
   weight: ["400", "500"],
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     "関西を中心に舞台美術の制作活動を行なっている、ENDO工房の公式Webサイトです。",
 };
 
-export default function SubPageLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -24,8 +25,10 @@ export default function SubPageLayout({
   return (
     <html lang="ja">
       <body className={`${notoSansJp.className} ${styles.layout}`}>
-        <Header isFixed />
-        <div className={styles.contents}>{children}</div>
+        <Template>
+          <Header />
+        </Template>
+        {children}
         <Footer />
       </body>
     </html>

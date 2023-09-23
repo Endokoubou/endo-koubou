@@ -8,7 +8,6 @@ import { ContactSection, Header, SnsButtons } from "@/app/components/organisms";
 export default function Home() {
   return (
     <>
-      <Header />
       <main className={styles.main}>
         <section className={styles.mv}>
           <div className={styles.title}>
