@@ -1,0 +1,18 @@
+.wrapper {
+  background: var(--color-base);
+  .inner {
+    width: var(--w-contents);
+    padding: var(--space-l) 0 var(--space-3);
+    margin: 0 auto;
+    .title {
+      font-size: 30px;
+      letter-spacing: 0.2em;
+    }
+    .sub_title {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      color: var(--color-tertiary);
+    }
+  }
+}

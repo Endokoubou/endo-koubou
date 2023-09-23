@@ -5,6 +5,7 @@ import { FlowItem } from "./FlowItem";
 import { ScrollButton } from "./ScrollButton";
 import { SnsButton } from "./SnsButton";
 import { ReadMore } from "./ReadMore";
+import { PageTitle } from "./PageTitle";
 
 export {
   TransButton,
@@ -14,4 +15,5 @@ export {
   ScrollButton,
   SnsButton,
   ReadMore,
+  PageTitle,
 };
