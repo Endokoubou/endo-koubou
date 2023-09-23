@@ -1,12 +1,9 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Logo, Typography } from "@/app/components/atoms";
 import styles from "./header.module.scss";
-
-export type HeaderProps = {
-  isFixed?: boolean;
-};
 
 const menuMapping = [
   { label: "作品一覧", path: "/art-work" },
@@ -14,12 +11,13 @@ const menuMapping = [
   { label: "お問い合わせ", path: "/contact" },
 ];
 
-export function Header({ isFixed = false }: HeaderProps) {
+export function Header() {
+  const path = usePathname();
+  const isTop = path === "/";
   const [showHeader, setShowHeader] = useState(false);
-  const fixedClass = isFixed ? "fixed" : "animation";
 
   useEffect(() => {
-    if (isFixed) {
+    if (!isTop) {
       return;
     } else {
       const handleScroll = () => {
@@ -36,12 +34,12 @@ export function Header({ isFixed = false }: HeaderProps) {
         window.removeEventListener("scroll", handleScroll);
       };
     }
-  }, [isFixed]);
+  }, [isTop]);
 
   return (
     <header
-      className={`${styles.header} ${styles[fixedClass]} ${
-        !isFixed && showHeader && styles.slideDown
+      className={`${styles.header} ${isTop && styles.animation} ${
+        isTop && showHeader && styles.slideDown
       }`}
     >
       <div className={styles.inner}>
