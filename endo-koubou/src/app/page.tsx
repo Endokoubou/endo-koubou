@@ -1,28 +1,19 @@
 import "./globals.css";
 import Image from "next/image";
+import { Typography } from "@/app/components/atoms";
+import { TransButton, FlowItem } from "@/app/components/molecules";
+import {
+  ContactSection,
+  SnsButtons,
+  MainVisual,
+} from "@/app/components/organisms";
 import styles from "./page.module.scss";
-import { FadeIn, Typography } from "@/app/components/atoms";
-import { TransButton, MvTitle, FlowItem } from "@/app/components/molecules";
-import { ContactSection, Header, SnsButtons } from "@/app/components/organisms";
 
 export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <section className={styles.mv}>
-          <div className={styles.title}>
-            <FadeIn fadeType="in">
-              <Image
-                src="/images/logo_endo-koubou.png"
-                width={75}
-                height={68}
-                alt="ENDO工房のロゴ画像"
-                className={styles.logo}
-              />
-            </FadeIn>
-            <MvTitle />
-          </div>
-        </section>
+        <MainVisual />
 
         <section className={styles.works}>
           <div className={styles.relative_box}>
