@@ -2,19 +2,29 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Logo, Typography } from "@/app/components/atoms";
+import { Button, Logo, Typography } from "@/app/components/atoms";
 import styles from "./header.module.scss";
+import useResponsive from "@/app/hooks/useResponsive";
+import { FaBars, FaXmark } from "react-icons/fa6";
 
 const menuMapping = [
-  { label: "作品一覧", path: "/art-work" },
-  { label: "会社概要 & スタッフ一覧", path: "/company" },
-  { label: "お問い合わせ", path: "/contact" },
+  { label: "ホーム", subLabel: "HOME", path: "/", isPc: false },
+  { label: "作品一覧", subLabel: "WORKS", path: "/work", isPc: true },
+  {
+    label: "会社概要 & スタッフ一覧",
+    subLabel: "COMPANY",
+    path: "/company",
+    isPc: true,
+  },
+  { label: "お問い合わせ", subLabel: "CONTACT", path: "/contact", isPc: true },
 ];
 
 export function Header() {
   const path = usePathname();
   const isTop = path === "/";
   const [showHeader, setShowHeader] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isPc = useResponsive("pc");
 
   useEffect(() => {
     if (!isTop) {
@@ -43,21 +53,56 @@ export function Header() {
       }`}
     >
       <div className={styles.inner}>
-        <Link href="/">
-          <Logo fill="secondary" />
-        </Link>
+        <div className={styles.logo}>
+          <Link href="/">
+            <Logo
+              fill="secondary"
+              width={isPc ? 160 : 140}
+              height={isPc ? 25.05 : 21.92}
+              viewBox={isPc ? "0 0 190 30" : "0 0 190 30"}
+            />
+          </Link>
+        </div>
+
+        {isPc ? (
+          <nav>
+            <ul className={styles.menu}>
+              {menuMapping.map(
+                (page, index) =>
+                  page.isPc && (
+                    <li key={index} className={styles.item}>
+                      <Link href={page.path}>
+                        <Typography variant="span">{page.label}</Typography>
+                      </Link>
+                    </li>
+                  )
+              )}
+            </ul>
+          </nav>
+        ) : (
+          <Button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {!isMenuOpen ? (
+              <FaBars className={styles.icon_menu} />
+            ) : (
+              <FaXmark className={styles.icon_menu} />
+            )}
+          </Button>
+        )}
+      </div>
+      {isMenuOpen && (
         <nav>
-          <ul className={styles.menu}>
+          <ul>
             {menuMapping.map((page, index) => (
               <li key={index} className={styles.item}>
                 <Link href={page.path}>
                   <Typography variant="span">{page.label}</Typography>
+                  <Typography variant="span">{page.subLabel}</Typography>
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
-      </div>
+      )}
     </header>
   );
 }

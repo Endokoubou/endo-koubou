@@ -22,9 +22,16 @@
   transform: translateY(-100%);
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1000px) {
   .header {
-    // background: red;
+    .inner {
+      padding: 0 var(--space-3);
+      width: 100%;
+      .icon_menu {
+        font-size: 28px;
+        color: var(--color-secondary);
+      }
+    }
   }
 }
 
@@ -32,6 +39,6 @@
   display: flex;
   gap: var(--space-10);
   .item {
-    padding: var(--space-3);
+    padding: var(--space-3) var(--space-3) var(--space-4);
   }
 }
