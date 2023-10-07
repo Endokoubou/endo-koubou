@@ -85,7 +85,17 @@
   width: var(--w-contents);
   margin: 0 auto;
 }
-
+@media (max-width: 1000px) {
+  .flow {
+    display: block;
+    width: var(--w-contents);
+    padding: 0 var(--space-6);
+    margin: 0 auto;
+    .sub_title {
+      margin: 0 0 var(--space-4);
+    }
+  }
+}
 .contact {
   position: relative;
   background: var(--color-primary);

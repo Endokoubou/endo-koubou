@@ -1,3 +1,4 @@
+"use client";
 import "./globals.css";
 import Image from "next/image";
 import { Typography } from "@/app/components/atoms";
@@ -8,8 +9,10 @@ import {
   MainVisual,
 } from "@/app/components/organisms";
 import styles from "./page.module.scss";
+import useResponsive from "./hooks/useResponsive";
 
 export default function Home() {
+  const isPc = useResponsive("pc");
   return (
     <>
       <main className={styles.main}>
@@ -87,7 +90,7 @@ export default function Home() {
 
         <section className={styles.flow}>
           <div className={styles.sub_title}>
-            <Typography variant="h2" vertical>
+            <Typography variant="h2" vertical={isPc && true}>
               制作依頼のフロー
               <br />
               <span>

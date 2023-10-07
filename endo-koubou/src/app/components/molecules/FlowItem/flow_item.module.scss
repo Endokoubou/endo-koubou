@@ -62,3 +62,54 @@
     margin-right: var(--space-2);
   }
 }
+
+@media (max-width: 1000px) {
+  .not_last_item {
+    &::before {
+      top: 90%;
+      width: 32.5px;
+      height: 45px;
+    }
+  }
+  .icon_wrapper {
+    width: 65px;
+    height: 65px;
+    .mail {
+      font-size: 24px;
+    }
+    .document {
+      font-size: 26px;
+    }
+    .chat {
+      font-size: 26px;
+    }
+    .edit {
+      font-size: 24px;
+    }
+    .presen {
+      font-size: 24px;
+    }
+    .check {
+      font-size: 26px;
+    }
+  }
+
+  .text_wrapper {
+    padding: var(--space-4) 0 0;
+    gap: var(--space-3);
+    p {
+      white-space: wrap;
+    }
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      color: var(--color-tertiary);
+      margin-right: 0;
+      margin-bottom: var(--space-2);
+    }
+    .step {
+      display: block;
+    }
+  }
+}

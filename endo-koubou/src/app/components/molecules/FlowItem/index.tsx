@@ -53,7 +53,9 @@ export function FlowItem({
         <div className={styles.icon_wrapper}>{selectIcon()}</div>
         <div className={styles.text_wrapper}>
           <Typography variant="h3">
-            <Typography variant="span">step{step}</Typography>
+            <Typography variant="span" className={styles.step}>
+              step{step}
+            </Typography>
             {title}
           </Typography>
           <Typography variant="p">{text}</Typography>
