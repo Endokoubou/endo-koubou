@@ -132,3 +132,7 @@ ul {
     color-scheme: dark;
   }
 }
+
+@media (max-width: 1000px) {
+  --w-contents: 100%;
+}
