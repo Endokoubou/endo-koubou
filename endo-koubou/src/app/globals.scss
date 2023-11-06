@@ -1,3 +1,4 @@
+@import "@/app/mixins.scss";
 :root {
   --color-base: #fff;
   --color-primary: #fcf8f6;
@@ -55,10 +56,4 @@ a:hover {
 
 ul {
   list-style-type: none;
-}
-
-@mixin sp {
-  @media (max-width: 1000px) {
-    @content;
-  }
 }
