@@ -1,5 +1,5 @@
 "use client";
-import "./globals.css";
+import "./globals.scss";
 import Image from "next/image";
 import { Typography } from "@/app/components/atoms";
 import { TransButton, FlowItem } from "@/app/components/molecules";
