@@ -9,7 +9,7 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 
 const menuMapping = [
   { label: "ホーム", subLabel: "HOME", path: "/", isPc: false },
-  { label: "作品一覧", subLabel: "WORKS", path: "/work", isPc: true },
+  { label: "作品一覧", subLabel: "WORKS", path: "/works", isPc: true },
   {
     label: "会社概要 & スタッフ一覧",
     subLabel: "COMPANY",
