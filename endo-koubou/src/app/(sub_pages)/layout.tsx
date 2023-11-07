@@ -1,6 +1,6 @@
 import "@/app/globals.scss";
 import type { Metadata } from "next";
-import { PageTitle } from "@/app/components/molecules";
+import { Breadcrumb, PageTitle } from "@/app/components/molecules";
 import SubPageTemplate from "./template";
 import styles from "./layout.module.scss";
 
@@ -15,5 +15,10 @@ export default function SubPageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <section className={styles.contents}>{children}</section>;
+  return (
+    <section className={styles.contents}>
+      <Breadcrumb />
+      {children}
+    </section>
+  );
 }

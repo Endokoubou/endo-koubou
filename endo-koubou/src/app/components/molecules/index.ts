@@ -7,6 +7,7 @@ import { SnsButton } from "./SnsButton";
 import { ReadMore } from "./ReadMore";
 import { PageTitle } from "./PageTitle";
 import { WorkCard } from "./WorkCard";
+import { Breadcrumb } from "./Breadcrumb";
 
 export {
   TransButton,
@@ -18,4 +19,5 @@ export {
   ReadMore,
   PageTitle,
   WorkCard,
+  Breadcrumb,
 };
