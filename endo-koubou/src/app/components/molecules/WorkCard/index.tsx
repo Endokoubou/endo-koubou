@@ -1,24 +1,49 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Typography } from "../../atoms";
 import styles from "./work_card.module.scss";
 
+type ImageData = {
+  url: string;
+  width: number;
+  height: number;
+};
+
 export type WorkCardProps = {
+  id: string;
   title: string;
-  programName: string;
+  companyName: string;
   date: string;
-  imagePath: string;
-  imageWidth: string;
-  imageHeight: string;
+  imageData: ImageData;
   alt: string;
 };
 
-export function WorkCard({ title, programName, date }: WorkCardProps) {
+export function WorkCard({
+  id,
+  title,
+  companyName,
+  date,
+  imageData,
+  alt,
+}: WorkCardProps) {
+  console.log("imageData", imageData);
   return (
     <div className={styles.card}>
-      <Image src="" width="100" height="100" alt="" />
-      <h3>{title}</h3>
-      <span>
-        {programName} / {date}
-      </span>
+      <Link href={`/works/${id}`}>
+        <Image
+          src={imageData.url}
+          width={imageData.width}
+          height={imageData.height}
+          alt={alt}
+          style={{ width: "100%", height: "auto" }}
+        />
+        <Typography variant="h3" className={styles.title}>
+          {title}
+        </Typography>
+        <Typography variant="span" className={styles.date}>
+          {companyName} / {date.substr(0, 4)}年
+        </Typography>
+      </Link>
     </div>
   );
 }
