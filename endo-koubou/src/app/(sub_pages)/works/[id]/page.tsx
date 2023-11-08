@@ -1,6 +1,7 @@
 import { getWorks } from "@/app/api/works";
 import { getWorkDetail } from "@/app/api/works/[id]";
 import { PageTitle } from "@/app/components/molecules";
+import { WorkDetailSection } from "@/app/components/organisms";
 
 export async function generateStaticParams() {
   const works = await getWorks();
@@ -22,6 +23,7 @@ export default async function WorkDetail(props: {
   return (
     <>
       <PageTitle title={detail.title} />
+      <WorkDetailSection detail={detail} />
     </>
   );
 }
