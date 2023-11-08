@@ -1,25 +1,24 @@
-import { Typography } from "@/app/components/atoms";
 import { WorkCard } from "@/app/components/molecules";
+import { Work } from "@/app/interface/work";
 import styles from "./works_section.module.scss";
 
 export type WorksSectionProps = {
-  works: any[];
+  works: Work[];
   className?: string;
 };
 
 export function WorksSection({ works, className }: WorksSectionProps) {
   return (
     <div className={`${styles.contents} ${className}`}>
-      {works.map((work, index) => (
+      {works.map((work) => (
         <WorkCard
-          key={index}
+          key={work.id}
+          id={work.id}
           title={work.title}
-          programName={work.programName}
+          companyName={work.companyName}
           date={work.date}
-          imagePath={work.imagePath}
-          imageWidth={work.imageWidth}
-          imageHeight={work.imageHeight}
-          alt={work.alt}
+          imageData={work.imageData}
+          alt={work.title}
         />
       ))}
     </div>
