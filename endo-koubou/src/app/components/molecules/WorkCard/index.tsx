@@ -26,7 +26,6 @@ export function WorkCard({
   imageData,
   alt,
 }: WorkCardProps) {
-  console.log("imageData", imageData);
   return (
     <div className={styles.card}>
       <Link href={`/works/${id}`}>
