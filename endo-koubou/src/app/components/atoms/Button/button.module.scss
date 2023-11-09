@@ -32,3 +32,10 @@
 .rounded {
   border-radius: 1000px;
 }
+
+.disable {
+  opacity: 0.4;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
