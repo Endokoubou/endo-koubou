@@ -11,15 +11,19 @@ export function SnsButton({ sns, link, className }: SnsButtonProps) {
   return (
     <Button isDisable={link ? false : true} className={className}>
       {sns === "x" ? (
-        <a href={`https://twitter.com/${link}`} target="blank">
+        link ? (
+          <a href={`https://twitter.com/${link}`} target="blank">
+            <FaXTwitter />
+          </a>
+        ) : (
           <FaXTwitter />
+        )
+      ) : sns == "instagram" && link ? (
+        <a href={`https://www.instagram.com/${link}`} target="blank">
+          <FaInstagram />
         </a>
       ) : (
-        sns == "instagram" && (
-          <a href={`https://www.instagram.com/${link}`} target="blank">
-            <FaInstagram />
-          </a>
-        )
+        <FaInstagram />
       )}
     </Button>
   );
