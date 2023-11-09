@@ -46,7 +46,7 @@ export default function Home() {
             }}
           />
           <div className={styles.button}>
-            <TransButton label="もっとみる" direction="next" path="/" />
+            <TransButton label="もっとみる" direction="next" path="/works" />
           </div>
         </section>
 
@@ -79,7 +79,11 @@ export default function Home() {
                     </Typography>
                   </div>
                   <div className={styles.button}>
-                    <TransButton label="もっとみる" direction="next" path="/" />
+                    <TransButton
+                      label="もっとみる"
+                      direction="next"
+                      path="/company"
+                    />
                   </div>
                 </div>
               </div>
