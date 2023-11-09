@@ -15,10 +15,5 @@ export default function SubPageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <section className={styles.contents}>
-      <Breadcrumb />
-      {children}
-    </section>
-  );
+  return <section className={styles.contents}>{children}</section>;
 }
