@@ -23,7 +23,7 @@ export function CompanySection({
           <dt>社名</dt>
           <dd>{company.companyName}</dd>
           <dt>設立年</dt>
-          <dd>{company.yearEstablished}</dd>
+          <dd>{company.yearEstablished.substring(0, 4)}年</dd>
           <dt>代表所在地</dt>
           <dd>{company.location}</dd>
           <dt>代表者</dt>
