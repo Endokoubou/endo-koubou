@@ -4,6 +4,7 @@ import { SnsButtons } from "./SnsButtons";
 import { ContactSection } from "./ContactSection";
 import { WorksSection } from "./WorksSection";
 import { WorkDetailSection } from "./WorkDetailSection";
+import { CompanySection } from "./CompanySection";
 import { MainVisual } from "./MainVisual";
 
 export {
@@ -13,5 +14,6 @@ export {
   ContactSection,
   WorksSection,
   WorkDetailSection,
+  CompanySection,
   MainVisual,
 };
