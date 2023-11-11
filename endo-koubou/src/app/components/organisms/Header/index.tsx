@@ -95,7 +95,7 @@ export function Header() {
           <ul>
             {menuMapping.map((page, index) => (
               <li key={index} className={styles.item}>
-                <Link href={page.path}>
+                <Link href={page.path} onClick={() => setIsMenuOpen(false)}>
                   <Typography variant="h4" className={styles.page_title}>
                     {page.label}
                   </Typography>
