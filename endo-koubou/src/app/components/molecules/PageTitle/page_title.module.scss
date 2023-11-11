@@ -7,6 +7,9 @@
     .title {
       font-size: 30px;
       letter-spacing: 0.2em;
+      @media (max-width: 1000px) {
+        font-size: 26px;
+      }
     }
     .sub_title {
       font-size: 12px;

@@ -10,8 +10,10 @@ export default async function Company() {
 
   return (
     <>
-      <Breadcrumb list={[{ label: "会社概要 & スタッフ一覧" }]} />
-      <PageTitle title="会社概要&スタッフ一覧" subtitle="COMPANY" />
+      <div className={styles.head_contents}>
+        <Breadcrumb list={[{ label: "会社概要" }]} />
+        <PageTitle title="会社概要" subtitle="COMPANY" />
+      </div>
       <CompanySection
         company={companyData}
         staffs={staffsData}
