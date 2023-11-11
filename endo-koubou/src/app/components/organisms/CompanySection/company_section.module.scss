@@ -11,7 +11,21 @@
     margin: var(--space-8) 0 0;
     dt {
       font-weight: bold;
+      @media (max-width: 1000px) {
+        margin: 0 0 var(--space-2);
+      }
     }
+    dd {
+      @media (max-width: 1000px) {
+        margin: 0 0 var(--space-6);
+      }
+    }
+    @media (max-width: 1000px) {
+      display: block;
+    }
+  }
+  @media (max-width: 1000px) {
+    padding: 0 var(--space-5);
   }
 }
 
@@ -27,6 +41,9 @@
     grid-column-gap: var(--space-8);
     grid-row-gap: var(--space-4);
     margin: var(--space-5) 0 0;
+    @media (max-width: 1000px) {
+      grid-row-gap: var(--space-9);
+    }
   }
 
   .staff_card {
@@ -42,5 +59,8 @@
       margin: var(--space-3) 0;
     }
     height: 126px;
+    @media (max-width: 1000px) {
+      height: auto;
+    }
   }
 }
