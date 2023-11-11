@@ -24,6 +24,7 @@ export function Header() {
   const isTop = path === "/";
   const [showHeader, setShowHeader] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const classIsOpen = isMenuOpen ? "open" : "";
   const isPc = useResponsive("pc");
 
   useEffect(() => {
@@ -48,9 +49,9 @@ export function Header() {
 
   return (
     <header
-      className={`${styles.header} ${isTop && styles.animation} ${
-        isTop && showHeader && styles.slideDown
-      }`}
+      className={`${styles.header} ${styles[classIsOpen]} ${
+        isTop && styles.animation
+      } ${isTop && showHeader && styles.slideDown}`}
     >
       <div className={styles.inner}>
         <div className={styles.logo}>
@@ -90,13 +91,17 @@ export function Header() {
         )}
       </div>
       {isMenuOpen && (
-        <nav>
+        <nav className={styles.sp_nav}>
           <ul>
             {menuMapping.map((page, index) => (
               <li key={index} className={styles.item}>
                 <Link href={page.path}>
-                  <Typography variant="span">{page.label}</Typography>
-                  <Typography variant="span">{page.subLabel}</Typography>
+                  <Typography variant="h4" className={styles.page_title}>
+                    {page.label}
+                  </Typography>
+                  <Typography variant="span" className={styles.sub_title}>
+                    {page.subLabel}
+                  </Typography>
                 </Link>
               </li>
             ))}

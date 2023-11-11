@@ -14,6 +14,9 @@
     width: var(--w-contents);
     margin: 0 auto;
   }
+  @media (max-width: 1000px) {
+    background: rgb(255 255 255 / 90%);
+  }
 }
 
 .animation {
@@ -31,6 +34,30 @@
         font-size: 28px;
         color: var(--color-secondary);
       }
+    }
+  }
+  .open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+  }
+}
+
+.sp_nav {
+  padding: var(--space-10) var(--space-10) 0;
+  .item {
+    margin: 0 0 var(--space-5);
+    .page_title {
+      display: block;
+      font-size: 18px;
+    }
+    .sub_title {
+      display: block;
+      color: var(--color-tertiary);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      line-height: 1.8;
     }
   }
 }
