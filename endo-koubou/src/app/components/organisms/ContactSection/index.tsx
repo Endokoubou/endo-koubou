@@ -17,7 +17,7 @@ export function ContactSection({ className }: ContactSectionProps) {
         ご依頼前の相談のみも受け付けておりますので、お気軽にお問い合わせください。
       </Typography>
       <ReadMore>
-        <>
+        <div className={styles.more_show_item}>
           <Typography variant="p">
             お問い合わせ時に必要な情報についてはこちらをご確認ください。
             <br />
@@ -52,7 +52,7 @@ export function ContactSection({ className }: ContactSectionProps) {
               <Typography variant="p">・その他質問事項など</Typography>
             </li>
           </ul>
-        </>
+        </div>
       </ReadMore>
       <div className={styles.button}>
         <ContactButton label="お問い合わせ" />

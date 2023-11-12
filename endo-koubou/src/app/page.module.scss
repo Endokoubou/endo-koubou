@@ -5,8 +5,8 @@
   span {
     display: block;
     font-size: 14px;
+    letter-spacing: 0.3em;
     color: var(--color-tertiary);
-    margin: 0 var(--space-5) 0 0;
   }
 }
 
@@ -19,6 +19,9 @@
     display: flex;
     justify-content: center;
     margin-top: var(--space-10);
+    span {
+      margin: 0 var(--space-5) 0 0;
+    }
   }
   .read {
     width: var(--w-contents);
@@ -53,9 +56,8 @@
   padding-top: var(--space-l);
   padding-bottom: 470px;
   h2 {
-    line-height: 1.6;
+    line-height: 1.8;
   }
-
   @media (max-width: 1000px) {
     padding-bottom: 0;
   }
@@ -69,6 +71,9 @@
   .sub_title {
     display: flex;
     justify-content: right;
+    span {
+      margin: 0 var(--space-3) 0 0;
+    }
   }
   .image {
     position: absolute;
@@ -131,6 +136,11 @@
   gap: var(--space-l);
   width: var(--w-contents);
   margin: 0 auto;
+  .sub_title {
+    span {
+      margin: 0 var(--space-5) 0 0;
+    }
+  }
   @media (max-width: 1000px) {
     display: block;
     // width: var(--w-contents);
@@ -150,32 +160,53 @@
   .inner {
     width: var(--w-contents);
     padding-top: var(--space-l);
-    margin: 210px auto 0;
+    margin: 220px auto 0;
   }
   .sub_title {
     position: absolute;
-    top: -154px;
+    top: -170px;
     left: 50%;
     display: flex;
     justify-content: center;
     transform: translateX(-50%);
+    span {
+      margin: 0 var(--space-5) 0 0;
+    }
   }
   .contents {
     padding: 0 var(--space-10);
     margin-top: var(--space-7);
+  }
+  @media (max-width: 1000px) {
+    .inner {
+      margin: 150px auto 0;
+    }
+    .sub_title {
+      top: -80px;
+    }
+    .contents {
+      padding: 0 var(--space-5);
+      margin-top: var(--space-7);
+    }
   }
 }
 
 .sns {
   text-align: center;
   background: var(--color-primary);
-  padding: var(--space-l) 0 var(--space-l);
+  padding: var(--space-l) 0;
   .icons {
     display: flex;
     justify-content: center;
     margin: var(--space-8) 0 0;
     svg {
       font-size: 28px;
+    }
+  }
+  @media (max-width: 1000px) {
+    padding: var(--space-8) var(--space-5) var(--space-m);
+    .icons {
+      margin: var(--space-5) 0 0;
     }
   }
 }

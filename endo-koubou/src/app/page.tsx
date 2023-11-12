@@ -138,7 +138,7 @@ export default function Home() {
             <FlowItem
               step="05"
               icon="presen"
-              title="台本もしくは依頼書、公演の概要"
+              title="プレゼンテーション"
               text="考案したデザインをお見せし、細部の最終調整を行います。"
             />
             <FlowItem
