@@ -3,5 +3,5 @@ import { apiCall } from "@/app/util/api";
 
 export async function getCompany(): Promise<Company> {
   const res = await apiCall("company");
-  return res.contents[0];
+  return res;
 }
