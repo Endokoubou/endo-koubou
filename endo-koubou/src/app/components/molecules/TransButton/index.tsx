@@ -4,12 +4,12 @@ import { Button, Typography } from "@/app/components/atoms";
 import styles from "./trans_button.module.scss";
 
 export type TransButtonProps = {
-  label: string;
   direction: "back" | "next";
   path: string;
+  label?: string;
 };
 
-export function TransButton({ label, direction, path }: TransButtonProps) {
+export function TransButton({ direction, path, label }: TransButtonProps) {
   const classDirection = direction;
   return (
     <Link href={path}>
