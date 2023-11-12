@@ -24,7 +24,7 @@ export function MainVisual() {
   }, [currentSlide]);
 
   return (
-    <section className={styles.mv} style={{ height: "100vh" }}>
+    <section className={styles.mv} style={{ height: "100dvh" }}>
       <div className={styles.title}>
         <FadeIn fadeType="in">
           <Image

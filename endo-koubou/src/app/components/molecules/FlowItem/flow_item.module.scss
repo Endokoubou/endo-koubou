@@ -4,6 +4,10 @@
   align-items: center;
   gap: var(--space-7);
   margin-bottom: 30px;
+  @media (max-width: 1000px) {
+    align-items: flex-start;
+    gap: var(--space-6);
+  }
 }
 
 .not_last_item {
@@ -15,6 +19,13 @@
     width: 45px;
     height: 30px;
     border-right: 1px solid var(--color-secondary);
+  }
+  @media (max-width: 1000px) {
+    &::before {
+      top: 60px;
+      width: 32.5px;
+      height: 120px;
+    }
   }
 }
 
@@ -45,35 +56,13 @@
   .check {
     font-size: 35px;
   }
-}
-
-.text_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  p {
-    white-space: nowrap;
-  }
-  span {
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    color: var(--color-tertiary);
-    margin-right: var(--space-2);
-  }
-}
-
-@media (max-width: 1000px) {
-  .not_last_item {
-    &::before {
-      top: 90%;
-      width: 32.5px;
-      height: 45px;
-    }
-  }
-  .icon_wrapper {
+  @media (max-width: 1000px) {
+    position: relative;
     width: 65px;
     height: 65px;
+    svg {
+      width: 100px;
+    }
     .mail {
       font-size: 24px;
     }
@@ -93,12 +82,28 @@
       font-size: 26px;
     }
   }
+}
 
-  .text_wrapper {
-    padding: var(--space-4) 0 0;
+.text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  p {
+    white-space: nowrap;
+  }
+  span {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--color-tertiary);
+    margin-right: var(--space-2);
+  }
+  @media (max-width: 1000px) {
+    padding: var(--space-1) 0 0;
     gap: var(--space-3);
     p {
-      white-space: wrap;
+      width: 100%;
+      white-space: normal;
     }
     span {
       font-size: 14px;

@@ -64,20 +64,30 @@ export default function Home() {
               </Typography>
             </div>
             <div className={styles.wrapper}>
-              <Image
-                src="/images/company.jpg"
-                width="794"
-                height="359"
-                alt="工房内の風景写真"
-                className={styles.image}
-              />
+              {isPc && (
+                <Image
+                  src="/images/company.jpg"
+                  width="794"
+                  height="359"
+                  alt="工房内の風景写真"
+                  className={styles.image}
+                />
+              )}
               <div className={styles.relative_box}>
                 <div className={styles.right_contents}>
-                  <div className={styles.read}>
-                    <Typography variant="p">
-                      軽い会社説明。〜〜年に設立して低コストながらもクオリティが高い作品が売りです等のテキストが入ります
-                    </Typography>
-                  </div>
+                  <Typography variant="p">
+                    軽い会社説明。〜〜年に設立して低コストながらもクオリティが高い作品が売りです等のテキストが入ります
+                  </Typography>
+                  {!isPc && (
+                    <Image
+                      src="/images/company.jpg"
+                      width="794"
+                      height="359"
+                      alt="工房内の風景写真"
+                      className={styles.image}
+                    />
+                  )}
+
                   <div className={styles.button}>
                     <TransButton
                       label="もっとみる"
@@ -97,9 +107,7 @@ export default function Home() {
             <Typography variant="h2" vertical={isPc && true}>
               制作依頼のフロー
               <br />
-              <span>
-                <Typography variant="span">FLOW</Typography>
-              </span>
+              <Typography variant="span">FLOW</Typography>
             </Typography>
           </div>
           <div>
