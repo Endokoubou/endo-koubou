@@ -6,6 +6,7 @@ import { WorksSection } from "./WorksSection";
 import { WorkDetailSection } from "./WorkDetailSection";
 import { CompanySection } from "./CompanySection";
 import { MainVisual } from "./MainVisual";
+import { ContactForm } from "./ContactForm";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   WorkDetailSection,
   CompanySection,
   MainVisual,
+  ContactForm,
 };
