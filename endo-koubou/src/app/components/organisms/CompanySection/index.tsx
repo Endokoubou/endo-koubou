@@ -1,9 +1,9 @@
 import { Company } from "@/app/interface/company";
 import { Typography } from "@/app/components/atoms";
-import styles from "./company_section.module.scss";
-import { PageTitle, SnsButton } from "../../molecules";
+import { PageTitle } from "../../molecules";
 import { Staff } from "@/app/interface/staff";
 import { SnsButtons } from "@/app/components/organisms";
+import styles from "./company_section.module.scss";
 
 export type ContactSectionProps = {
   company: Company;
