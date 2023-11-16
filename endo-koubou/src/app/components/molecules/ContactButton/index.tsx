@@ -8,7 +8,7 @@ export type ContactButtonProps = {
 
 export function ContactButton({ label }: ContactButtonProps) {
   return (
-    <Button color="base" bgColor="secondary" rounded size="m">
+    <Button color="base" bgColor="secondary" rounded size="m" type="submit">
       <Typography variant="p">{label}</Typography>
     </Button>
   );
