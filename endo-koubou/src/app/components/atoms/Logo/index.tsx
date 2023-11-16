@@ -18,7 +18,7 @@ export function Logo({ fill, width, height, viewBox, className }: LogoProps) {
       className={`${styles[fillClass]} ${className}`}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_714_423)">
+      <g clipPath="url(#clip0_714_423)">
         <path
           className={styles.path}
           d="M53.9093 8.04249V13.5482H62.952V16.8395H53.9093V23.5446H63.5698V27.0204H49.5898V4.56665H63.5698V8.04249H53.9093Z"
