@@ -1,10 +1,9 @@
 import "./globals.scss";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
-import styles from "./layout.module.scss";
 import { Footer, Header } from "@/app/components/organisms";
 import Template from "./template";
-
+import styles from "./layout.module.scss";
 const notoSansJp = Noto_Sans_JP({
   weight: ["400", "500"],
   subsets: ["latin"],

@@ -1,7 +1,6 @@
 import "@/app/globals.scss";
 import type { Metadata } from "next";
-import { Breadcrumb, PageTitle } from "@/app/components/molecules";
-import SubPageTemplate from "./template";
+import { Toaster } from "react-hot-toast";
 import styles from "./layout.module.scss";
 
 export const metadata: Metadata = {
@@ -15,5 +14,9 @@ export default function SubPageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <section className={styles.contents}>{children}</section>;
+  return (
+    <section className={styles.contents}>
+      {children} <Toaster />
+    </section>
+  );
 }
