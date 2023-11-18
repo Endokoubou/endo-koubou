@@ -8,6 +8,7 @@ import { ReadMore } from "./ReadMore";
 import { PageTitle } from "./PageTitle";
 import { WorkCard } from "./WorkCard";
 import { Breadcrumb } from "./Breadcrumb";
+import { Toaster } from "./Toaster";
 
 export {
   TransButton,
@@ -20,4 +21,5 @@ export {
   PageTitle,
   WorkCard,
   Breadcrumb,
+  Toaster,
 };

@@ -15,15 +15,15 @@
 }
 
 .success {
-  color: #59aa5c;
+  color: var(--color-success);
   background: #eef4ee;
-  border: 1px solid #59aa5c;
+  border: 1px solid var(--color-success);
 }
 
 .error {
-  color: #f07878;
+  color: var(--color-attention);
   background: #ffe5e5;
-  border: 1px solid #f07878;
+  border: 1px solid var(--color-attention);
 }
 
 @keyframes fadeInOutUp {
