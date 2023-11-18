@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Work } from "@/app/interface/work";
-import styles from "./work_detail_section.module.scss";
 import { Typography } from "@/app/components/atoms";
+import { TransButton } from "@/app/components/molecules";
+import styles from "./work_detail_section.module.scss";
 
 export type WorksSectionProps = {
   detail: Work;
@@ -41,6 +42,13 @@ export function WorkDetailSection({ detail, className }: WorksSectionProps) {
       <section>
         <Typography variant="h2">制作風景</Typography>
       </section>
+      <div className={styles.back_button}>
+        <TransButton
+          label="作品一覧へ戻る"
+          direction={"back"}
+          path={"/works"}
+        />
+      </div>
     </div>
   );
 }
