@@ -32,7 +32,7 @@ export function Footer() {
           <nav>
             <ul className={styles.links}>
               <li>
-                <Link href="/art-work">
+                <Link href="/works">
                   <Typography
                     variant="p"
                     vertical={isPc}
