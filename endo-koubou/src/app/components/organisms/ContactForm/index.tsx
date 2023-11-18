@@ -13,7 +13,7 @@ export function ContactForm() {
   const onSubmit = handleSubmit(async (data) => {
     setIsDisable(true);
     try {
-      await fetch("https://hyperform.jp/api/async/4WVzDf22/complete", {
+      await fetch(`${process.env.NEXT_PUBLIC_HYPERFORM_END_POINT}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
