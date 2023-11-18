@@ -8,15 +8,30 @@
   h4 {
     display: inline-block;
     margin: 0 0 var(--space-1);
+    .required {
+      font-size: 10px;
+      color: var(--color-attention);
+    }
+    .optional {
+      font-size: 10px;
+      color: var(--color-tertialy);
+    }
   }
   input {
     display: block;
+    &:disabled {
+      opacity: 0.7;
+      background: var(--color-base);
+    }
   }
   .input_text {
     width: 300px;
     padding: var(--space-2);
     border: 1px solid var(--color-secondary);
     border-radius: 4px;
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
   }
   select {
     display: block;
@@ -24,6 +39,13 @@
     padding: var(--space-2);
     border: 1px solid var(--color-secondary);
     border-radius: 4px;
+    &:disabled {
+      opacity: 0.7;
+      background: #fff;
+    }
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
   }
   textarea {
     width: 100%;
@@ -32,6 +54,10 @@
     border: 1px solid var(--color-secondary);
     border-radius: 4px;
     resize: none;
+    &:disabled {
+      opacity: 0.7;
+      background: #fff;
+    }
   }
   .submit_button {
     width: 200px;
@@ -40,4 +66,8 @@
       width: 100%;
     }
   }
+}
+
+.cursor_wait {
+  cursor: wait !important;
 }
