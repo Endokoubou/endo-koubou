@@ -38,13 +38,17 @@ export default function Home() {
             </div>
             <div className={styles.bg} />
           </div>
-          <div
-            style={{
-              width: "100%",
-              height: "650px",
-              background: "#5e5e5e",
-            }}
-          />
+          {isPc ? (
+            <div
+              style={{
+                width: "100%",
+                height: "650px",
+                background: "#5e5e5e",
+              }}
+            />
+          ) : (
+            <></>
+          )}
           <div className={styles.button}>
             <TransButton label="もっとみる" direction="next" path="/works" />
           </div>
