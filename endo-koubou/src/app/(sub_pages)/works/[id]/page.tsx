@@ -2,6 +2,8 @@ import { getWorks } from "@/app/api/works";
 import { getWorkDetail } from "@/app/api/works/[id]";
 import { Breadcrumb, PageTitle } from "@/app/components/molecules";
 import { WorkDetailSection } from "@/app/components/organisms";
+import { ResolvingMetadata, Metadata } from "next";
+import { Props } from "next/script";
 import styles from "./page.module.scss";
 
 export async function generateStaticParams() {
@@ -10,15 +12,24 @@ export async function generateStaticParams() {
   return detailPaths;
 }
 
+export async function generateMetadata(props: {
+  params: { id: string };
+}): Promise<Metadata> {
+  const detailData = await getWorkDetail(props.params.id);
+  return {
+    title: detailData.title,
+    openGraph: {
+      images: [`${detailData.imageData.url}`],
+    },
+  };
+}
+
 async function getDetail(id: string) {
   const res = await getWorkDetail(id);
   return res;
 }
 
-export default async function WorkDetail(props: {
-  params: { id: string };
-  searchParams: {};
-}) {
+export default async function WorkDetail(props: { params: { id: string } }) {
   const detail = await getDetail(props.params.id);
 
   return (
