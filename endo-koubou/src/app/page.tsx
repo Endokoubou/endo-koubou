@@ -1,7 +1,7 @@
 "use client";
 import "./globals.scss";
 import Image from "next/image";
-import { Typography } from "@/app/components/atoms";
+import { FadeIn, Typography } from "@/app/components/atoms";
 import { TransButton, FlowItem } from "@/app/components/molecules";
 import {
   ContactSection,
@@ -39,13 +39,26 @@ export default function Home() {
             <div className={styles.bg} />
           </div>
           {isPc ? (
-            <div
-              style={{
-                width: "100%",
-                height: "650px",
-                background: "#5e5e5e",
-              }}
-            />
+            <>
+              <FadeIn delay={1} fadeType="up">
+                <div
+                  style={{
+                    width: "100%",
+                    height: "325px",
+                    background: "#5e5e5e",
+                  }}
+                />
+              </FadeIn>
+              <FadeIn delay={1} fadeType="up">
+                <div
+                  style={{
+                    width: "100%",
+                    height: "325px",
+                    background: "#5e5e5e",
+                  }}
+                />
+              </FadeIn>
+            </>
           ) : (
             <></>
           )}
